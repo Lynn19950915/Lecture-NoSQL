@@ -11,7 +11,7 @@
 ```
 # {} 表示查詢條件，若無則留空
 > db.<collectionName>.find({}, {"title": 1})
-     
+
 # 預設輸出 _id 字段 (default=1)，可調整
 > db.<collectionName>.find({}, {"_id": 0, "title": 1})
 ```
@@ -21,15 +21,14 @@
 ```
 # select * from <collectionName> where by="Lynn"
 > db.<collectionName>.find({"by": "Lynn"})
-
-# 模糊比對，字首 (/^example/)、字尾 (/example$/)
-> db.<collectionName>.find({"title": /example/})
- 
 # select * from <collectionName> where like=100
 > db.<collectionName>.find({"like": 100})
 
 # select * from <collectionName> where time>="2020/1/1"，大於 ($gt, $gte)、小於 ($lt, $lte)
 > db.<collectionName>.find({"time": {$gte: "2020/1/1"}})
+
+# 模糊比對，字首 (/^example/)、字尾 (/example$/)
+> db.<collectionName>.find({"title": /example/})
 ```
 
 - 多條件查詢
@@ -72,4 +71,4 @@ db.\<collectionName>.aggregate(...)
 > db.<collectionName>.find().limit(1).skip(5)
 ```
 
-3. 三者同時出現時，執行順序為 sort(), skip(), limit()，分別代表重整、篩選與呈現。
+3. 三者同時出現時，執行順序為 `sort(), skip(), limit()`，分別代表排序、跳過與限取。

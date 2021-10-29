@@ -4,15 +4,15 @@
 1. db.createCollection(name, options)
 
 2. 語法規定
-- 名稱限制全為小寫，且不含特殊字元符號。
+- 名稱限制`全為小寫`，且不含特殊字元符號。
 - 常用 option 參數
 
   |  | 型別 | 功能 |
   | :---: | :---: | :---: |
   | capped | 布林值 | 創建固定大小 (size) 之集合 |
   | autoIndexId | 布林值 | 自動於 \_id 建立索引 (default=false) |
-  | size | 數值 | 設定集合之大小上限 (單位為 KB) |
-  | max | 數值 | 設定集合之檔案數量上限 |
+  | size | 數值 | 設定集合之`大小上限` (單位為 KB) |
+  | max | 數值 | 設定集合之`檔案數量上限` |
 
 ```
 # 錯誤，capped 必須指定集合大小
@@ -25,7 +25,7 @@
 ### 3-2 查詢語法
 1. show collections/tables: 顯示所有集合表列表
 
-2. 不同於數據庫，collection 就算無數據亦會顯示於列表；亦可透過新增資料主動創建 collection
+2. 不同於數據庫，collection 就算無數據亦會顯示於列表；亦可透過`新增資料主動創建 collection`。
 ```
 # 數據庫新增資料語法相同，故其名稱不可為 example01
 > db.example01.insert({"name": "lecture03"})
