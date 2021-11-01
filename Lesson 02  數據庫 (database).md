@@ -16,36 +16,36 @@
 show dbs: 顯示所有數據庫列表
 
 2. 甫創建之數據庫雖顯示於 db，卻不出現在 show dbs 清單，`至少需加入一筆數據`。
-```
+<pre>
 > use lecture02
-switched to db lecture02
+<i>switched to db lecture02</i>
 > db
-lecture02
+<i>lecture02</i>
 > show dbs
-admin   0.000GB
+<i>admin   0.000GB
 config  0.000GB
-local   0.000GB
+local   0.000GB</i>
 
 > db.lecture02.insert({"name": "lecture02"})
-WriteResult({"nInserted": 1})
+<i>WriteResult({"nInserted": 1})</i>
 > show dbs
-admin      0.000GB
+<i>admin      0.000GB
 config     0.000GB
 local      0.000GB
-lecture02  0.000GB
-```
+lecture02  0.000GB</i>
+</pre>
 
 ---
 ### 2-3 刪除語法
 db.dropDatabase(): 刪除 (當前) 數據庫
-```
+<pre>
 > use lecture02
-switched to db lecture02
+<i>switched to db lecture02</i>
 > db.dropDatabase()
-{"dropped": "lecture02", "ok": 1}
+<i>{"dropped": "lecture02", "ok": 1}</i>
 
 > show dbs
-admin   0.000GB
+<i>admin   0.000GB
 config  0.000GB
-local   0.000GB
-```
+local   0.000GB</i>
+</pre>

@@ -18,7 +18,7 @@
 ### 1-2 MongoDB 安裝
 1. 資料庫創建
 - 連接法：透過手動創建檔案，設定連結。
-```
+```shell
 (terminal)
 > cd c:\
 > mkdir data
@@ -31,7 +31,7 @@
 > C:\mongodb\bin\mongo.exe
 ```
 - 配置法：透過管理檔之配置，啟動連結。
-```
+```shell
 (terminal)
 > mkdir c:\data\db
 > mkdir c:\data\log
@@ -51,11 +51,11 @@ path c:\data\db
 直接執行 `C:\mongodb\bin\mongod.exe`，即可進入後台管理 shell。
 
 - 標準連線語法
-```
+```shell
 > mongodb://[username:password@]host1[:port1][,host2[:post2]...][/[database][?options]]
 ```
 - 連線實例
-```
+```shell
 # 連線至本地端
 > mongodb://localhost
 # 以帳號、密碼連線至本地資料庫 (default=test)

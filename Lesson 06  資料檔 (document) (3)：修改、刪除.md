@@ -2,14 +2,14 @@
 
 ### 6-1 修改語法 (單筆)
 1. db.\<collectionName>.update(...)
-```
+<pre>
 # query 條件 +update 內容，若無條件則留空
-> db.<collectionName>.update({}, {$set: {"by": "Lynn"}})
-> db.<collectionName>.update({"title": "lecture06"}, {$set: {"by": "Lynn"}})
+> db.&lt;collectionName&gt;.update({}, {$set: {"by": "Lynn"}})
+> db.&lt;collectionName&gt;.update({"title": "lecture06"}, {$set: {"by": "Lynn"}})
 
 # nMatched=nUpserted+nModified
-WriteResult({"nMatched": 1, "nUpserted": 0, "nModified": 1})
-```
+<i>WriteResult({"nMatched": 1, "nUpserted": 0, "nModified": 1})</i>
+</pre>
 2. 常用 update 參數
 
 |  | 功能 |
@@ -34,25 +34,25 @@ WriteResult({"nMatched": 1, "nUpserted": 0, "nModified": 1})
 ---
 ### 6-2 修改語法 (多筆)
 db.\<collectionName>.updateMany(...)
-```
-> db.<collectionName>.updateMany({}, {$set: {"by": "Lynn"}})
+<pre>
+> db.&lt;collectionName&gt;.updateMany({}, {$set: {"by": "Lynn"}})
 # 所有滿足條件者均修改，已形同宣告 multi=true
-> db.<collectionName>.updateMany({"title": "lecture06"}, {$set: {"by": "Lynn"}})
+> db.&lt;collectionName&gt;.updateMany({"title": "lecture06"}, {$set: {"by": "Lynn"}})
 
 # matchedCount=modifiedCount
-{"acknowledged": true, "matchedCount": 3, "modifiedCount": 3}
-```
+<i>{"acknowledged": true, "matchedCount": 3, "modifiedCount": 3}</i>
+</pre>
 
 ---
 ### 6-3 刪除語法
 db.\<collectionName>.remove(...)
-```
+<pre>
 # query 條件+justOne 設定
-> db.<collectionName>.remove("by": "Lynn")
+> db.&lt;collectionName&gt;.remove("by": "Lynn")
 # justOne: 0，形同 deleteMany
-WriteResult({"nRemoved": 2})
+<i>WriteResult({"nRemoved": 2})</i>
 
-> db.<collectionName>.remove("by": "Lynn", justOne: true)
+> db.&lt;collectionName&gt;.remove("by": "Lynn", justOne: true)
 # justOne: 1，形同 deleteOne
-WriteResult({"nRemoved": 1})
-```
+<i>WriteResult({"nRemoved": 1})</i>
+</pre>

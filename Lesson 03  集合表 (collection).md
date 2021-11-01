@@ -26,22 +26,22 @@
 1. show collections/tables: 顯示所有集合表列表
 
 2. 不同於數據庫，collection 就算無數據亦會顯示於列表；亦可透過`新增資料主動創建 collection`。
-```
+<pre>
 # 數據庫新增資料語法相同，故其名稱不可為 example01
 > db.example01.insert({"name": "lecture03"})
 > show collections
-lecture03
-```
+<i>lecture03</i>
+</pre>
 
 ---
 ### 3-3 刪除語法
 db.\<collectionName>.drop(): 刪除(當前)集合表
-```
+<pre>
 > use lecture03
-switched to db lecture03
+<i>switched to db lecture03</i>
 > show tables
-example01
+<i>example01</i>
 > db.example01.drop()
-true
+<i>true</i>
 > show tables
-```
+</pre>

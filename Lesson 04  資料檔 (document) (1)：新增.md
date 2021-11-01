@@ -11,27 +11,27 @@
 ```
 
 2. 寫入變量，再新增資料。
-```
+<pre>
 > document={"title": "lecture04",
 "text": "這是集合表中，一筆文檔的某個值",
 "by": ["Lynn", "Charlie"],
 "time": "2020/01/03"}
 
 > db.lecture04.insert(document)
-WriteResult({"nInserted": 1})
-```
+<i>WriteResult({"nInserted": 1})</i>
+</pre>
 
 ---
 ### 4-2 新增語法 (多筆)
 1. db.\<collectionName>.insertMany([{...}])
-```
+<pre>
 # 可將寫入指令設為變數
 > example01=db.lecture04.insertMany([{"title": "first"}, {"title": "second"}])
 > example01
-{"acknowledged": true,
+<i>{"acknowledged": true,
 "insertedIds": [ObjectId("571a22a911a82a1d94c02337"),
-ObjectId("571a22a911a82a1d94c02338")]}
-```
+ObjectId("571a22a911a82a1d94c02338")]}</i>
+</pre>
 
 2. 迴圈寫入變量，再新增資料。
 ```
